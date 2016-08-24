@@ -1,0 +1,11 @@
+# -*- coding: utf-8 -*-
+from openerp import models, fields, api
+class CasoProject(models.Model):
+    _inherit = 'project.project'
+    requerido_id = fields.Many2many('res.partner', 'requerido_partner', 'name', string="Réu")
+    proponente_id = fields.Many2many('res.partner', 'proponente_partner', 'name', string="Autor")
+    description = fields.Html('Descrição')
+    valor_caso = fields.Float('Valor da Causa')
+    tag_id = fields.Many2many('project.category', string="Marcador")
+    processo_id = fields.Many2many('processo.project', string="Processo")
+    local_id = fields.Many2one('local.project', string="Local")

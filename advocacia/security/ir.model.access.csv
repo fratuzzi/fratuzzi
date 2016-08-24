@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_processo_project,processo.project,model_processo_project,project.group_project_user,1,1,1,0
+access_processo_project_manager,processo.project,model_processo_project,project.group_project_manager,1,1,1,1
+access_local_project,local.project,model_local_project,project.group_project_user,1,1,1,0
+access_local_project_manager,local.project,model_local_project,project.group_project_manager,1,1,1,1
+access_competencia_project,competencia.project,model_competencia_project,project.group_project_user,1,1,1,0
+access_competencia_project_manager,competencia.project,model_competencia_project,project.group_project_manager,1,1,1,1

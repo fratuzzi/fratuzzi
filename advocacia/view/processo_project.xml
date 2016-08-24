@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<record id="view_tree_processo_project" model="ir.ui.view">
+			<field name="name">Processo</field>
+			<field name="model">processo.project</field>
+			<field name="arch" type="xml">
+			  <tree>
+				<field name="processo"/>
+				<field name="competencia"/>
+			  </tree>
+			</field>
+		</record>
+		
+		<record id="view_form_processo_project" model="ir.ui.view">
+			<field name="name">Processo</field>
+			<field name="model">processo.project</field>
+			<field name="arch" type="xml">
+			  <form>
+			   <group>
+				<field name="processo"/>
+				<field name="competencia"/>
+			   </group>
+			  </form>
+			</field>
+		</record>
+		
+		<act_window id="action_processo_project"
+			name="Processos"
+			res_model="processo.project"
+			view_mode="tree,form" />
+
+		<menuitem id="menu_processo_project"
+			name="Processos"
+			parent="project.menu_project_management"
+			sequence="1"
+			action="action_processo_project" />
+	</data>
+</openerp>

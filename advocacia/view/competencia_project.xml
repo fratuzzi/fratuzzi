@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<record id="view_tree_competencia_project" model="ir.ui.view">
+			<field name="name">Competências</field>
+			<field name="model">competencia.project</field>
+			<field name="arch" type="xml">
+			  <tree>
+				<field name="competencia"/>
+			  </tree>
+			</field>
+		</record>
+		
+		<record id="view_form_competencia_project" model="ir.ui.view">
+			<field name="name">Competências</field>
+			<field name="model">competencia.project</field>
+			<field name="arch" type="xml">
+			  <form>
+			   <group>
+				<field name="competencia"/>
+			   </group>
+			  </form>
+			</field>
+		</record>
+		
+		<act_window id="action_competencia_project"
+			name="Competências"
+			res_model="competencia.project"
+			view_mode="tree,form" />
+
+		<menuitem id="menu_competencia_project"
+			name="Competências"
+			parent="project.menu_project_management"
+			sequence="21"
+			action="action_competencia_project" />
+	</data>
+</openerp>

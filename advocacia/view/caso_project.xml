@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<record	id="view_form_caso_project_inherited" model="ir.ui.view">
+			<field name="name">Project form - User extension</field>
+			<field name="model">project.project</field>
+			<field name="inherit_id" ref="project.edit_project"/>
+			<field name="arch" type="xml">
+				<field name="partner_id" position="after">
+						<newline/>
+						<field name="tag_id" widget="many2many_tags"/>
+						<newline/>
+						<field name="local_id"/>
+						<newline/>
+						<field name="valor_caso"/>
+				</field>
+				<notebook position="inside">
+					<page string='Partes'>
+					  <group>
+						<field name="proponente_id"/>
+						<field name="requerido_id"/>
+					  </group>
+					</page>
+					<page string='Processos'>
+						<group>
+							<field name="processo_id"/>
+						</group>
+					</page>
+					<page string='Observações'>
+					  <group>
+						<field name="description"/>
+					  </group>
+					</page>
+				</notebook>
+			</field>
+		</record>
+	</data>
+</openerp>

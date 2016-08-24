@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<record id="view_tree_local_project" model="ir.ui.view">
+			<field name="name">Locais</field>
+			<field name="model">local.project</field>
+			<field name="arch" type="xml">
+			  <tree>
+				<field name="local"/>
+			  </tree>
+			</field>
+		</record>
+		
+		<record id="view_form_local_project" model="ir.ui.view">
+			<field name="name">Locais</field>
+			<field name="model">local.project</field>
+			<field name="arch" type="xml">
+			  <form>
+			   <group>
+				<field name="local"/>
+			   </group>
+			  </form>
+			</field>
+		</record>
+		
+		<act_window id="action_local_project"
+			name="Locais"
+			res_model="local.project"
+			view_mode="tree,form" />
+
+		<menuitem id="menu_local_project"
+			name="Locais"
+			parent="project.menu_project_management"
+			sequence="21"
+			action="action_local_project" />
+	</data>
+</openerp>
