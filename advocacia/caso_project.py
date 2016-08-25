@@ -6,6 +6,6 @@ class CasoProject(models.Model):
     proponente_id = fields.Many2many('res.partner', 'proponente_partner', 'name', string="Autor")
     description = fields.Html('Descrição')
     valor_caso = fields.Float('Valor da Causa')
-    tag_id = fields.Many2many('project.category', string="Marcador")
+    tag_id = fields.Many2many('project.tags', string="Marcador")
     processo_id = fields.Many2many('processo.project', string="Processo")
     local_id = fields.Many2one('local.project', string="Local")
