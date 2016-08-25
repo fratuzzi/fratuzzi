@@ -1,2 +1,1 @@
-Fratuzzi Tecnologias
-Módulos para odoo versão 9.0
+Altera a aplicação projeto para uso em escritórios de advocacia.
